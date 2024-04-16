@@ -1,0 +1,59 @@
+.listar-perfis-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .header {
+    margin-bottom: 20px;
+  }
+  
+  .input-novo-perfil {
+    margin-right: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .btn-criar {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .perfis-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .perfil-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .buttons-container {
+    display: flex;
+  }
+  
+  .btn-deletar,
+  .btn-atualizar {
+    padding: 5px 10px;
+    margin-left: 5px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-atualizar {
+    background-color: #28a745;
+  }
+  

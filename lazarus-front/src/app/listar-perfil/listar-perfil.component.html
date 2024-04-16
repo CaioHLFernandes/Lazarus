@@ -1,0 +1,28 @@
+<div class="listar-perfis-container">
+    <h2>Listar Perfis</h2>
+  
+    <div class="header">
+      <input type="text" placeholder="Nome do Novo Perfil" [(ngModel)]="novoPerfilDescricao">
+      <button class="btn-criar" (click)="criarPerfil()">Criar Perfil</button>
+    </div>
+  
+    <ul class="perfis-list">
+      <li *ngFor="let profile of perfis" class="perfil-item">
+        <span>{{ profile.descricao }}</span>
+        <div class="buttons-container">
+          <button class="btn-deletar" (click)="deletarPerfil(profile.id ?? 0)">Deletar</button>
+          <button class="btn-atualizar" (click)="abrirModalEditarPerfil(profile)">Editar</button>
+        </div>
+      </li>
+    </ul>
+
+    <div class="modal" *ngIf="perfilSelecionado">
+      <div class="modal-content">
+        <h2>Editar Perfil</h2>
+        <input type="text" [ngModel]="perfilEditado?.descricao ?? ''" (ngModelChange)="perfilEditado!.descricao = $event" placeholder="Novo nome do perfil">
+        <button (click)="atualizarPerfil()">Salvar Alterações</button>
+        <button (click)="fecharModalEditarPerfil()">Cancelar</button>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,16 @@
+<div>
+    <ul class="tabs">
+      <li (click)="selecionarTab('perfis')" [class.active]="tabSelecionada === 'perfis'">Perfis</li>
+      <li (click)="selecionarTab('usuarios')" [class.active]="tabSelecionada === 'usuarios'">Usuários</li>
+    </ul>
+  </div>
+  
+  <div class="container">
+    <div *ngIf="tabSelecionada === 'perfis'">
+      <app-listar-perfil></app-listar-perfil>
+    </div>
+    <div *ngIf="tabSelecionada === 'usuarios'">
+      <app-listar-usuario></app-listar-usuario>
+    </div>
+  </div>
+  

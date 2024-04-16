@@ -1,0 +1,64 @@
+.listar-usuarios-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .header {
+    margin-bottom: 20px;
+  }
+  
+  .input-novo-usuario {
+    margin-right: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .btn-criar {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .usuarios-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .usuario-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .perfis-usuario {
+    font-size: 0.9rem;
+    color: #6c757d;
+  }
+  
+  .buttons-container {
+    display: flex;
+  }
+  
+  .btn-atualizar,
+  .btn-deletar {
+    padding: 5px 10px;
+    margin-left: 5px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-deletar {
+    background-color: #dc3545;
+  }
+  

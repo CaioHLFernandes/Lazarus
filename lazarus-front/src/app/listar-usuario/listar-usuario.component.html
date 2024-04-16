@@ -1,0 +1,37 @@
+<div class="listar-usuarios-container">
+    <h2>Listar Usuários</h2>
+  
+    <div class="header">
+      <input type="text" placeholder="Nome do Novo Usuário" [(ngModel)]="novoUsuarioNome">
+      <button class="btn-criar" (click)="criarUsuario()">Criar Usuário</button>
+    </div>
+  
+    <select [(ngModel)]="perfilSelecionado" multiple>
+      <option *ngFor="let perfil of perfisList" [value]="perfil.id">{{ perfil.descricao }}</option>
+    </select>
+  
+    <ul class="usuarios-list">
+      <li *ngFor="let usuario of usuarios" class="usuario-item">
+        <span>{{ usuario.nome }}</span>
+        <span class="perfis-usuario">Perfis: {{ usuario.perfisId.join(', ') }}</span>
+        <div class="buttons-container">
+          <button class="btn-atualizar" (click)="abrirModalEditarUsuario(usuario)">Atualizar</button>
+          <button class="btn-deletar" (click)="deletarUsuario(usuario.id ?? 0)">Deletar</button>
+        </div>
+      </li>
+    </ul>
+  
+    <div class="modal" *ngIf="usuarioEditado">
+        <h3>Editar Usuário</h3>
+        <input type="text" [(ngModel)]="usuarioEditado.nome" placeholder="Novo nome do usuário">
+        <h4>Perfis:</h4>
+        <ul>
+          <li *ngFor="let perfil of perfisList">
+            <input type="checkbox" [checked]="usuarioEditado.perfisId.includes(perfil.id)" (change)="togglePerfil(perfil.id)">
+            <label>{{ perfil.descricao }}</label>
+          </li>
+        </ul>
+        <button (click)="atualizarUsuario()">Salvar Alterações</button>
+        <button (click)="fecharModalEditarUsuario()">Cancelar</button>
+      </div>
+  
