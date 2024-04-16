@@ -22,7 +22,6 @@ Flexibilidade e Escalabilidade: Graças à arquitetura modular do Angular e à r
 
 Como Executar o Projeto
 Para executar o projeto localmente, siga as instruções abaixo:
-
 Clone este repositório para sua máquina local.
 Certifique-se de ter o Angular CLI e o Maven instalados em sua máquina.
 Navegue até a pasta do projeto no terminal.
